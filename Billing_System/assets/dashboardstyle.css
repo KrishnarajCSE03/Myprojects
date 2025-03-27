@@ -1,0 +1,262 @@
+/* 🌍 Global Styles */
+body {
+    background: linear-gradient(135deg, #f0f4ff, #d9e4f5);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* 🔹 Main Content Layout */
+.main-content {
+    margin-left: 310px;
+    padding: 30px;
+    margin-bottom: 10px;
+    transition: margin-left 0.3s ease;
+}
+
+/* 🔹 Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.header h2 {
+    color: #1E1E2F;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #007BFF;
+}
+
+/* 📊 Dashboard Statistics Cards */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    max-width: 220px;/* Ensures cards fit properly */
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎨 Card Colors */
+.card-primary { background: linear-gradient(to right, #007BFF, #0056D2); }
+.card-success { background: linear-gradient(to right, #28A745, #1F7D3A); }
+.card-warning { background: linear-gradient(to right, #FFC107, #D39E00); }
+.card-danger { background: linear-gradient(to right, #DC3545, #B02A37); }
+.card-info { background: linear-gradient(to right, #17A2B8, #10707F); }
+
+/* 📈 Charts Section */
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centers charts properly */
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* Prevents expansion */
+}
+
+/* 🎯 Individual Chart Box */
+.chart-box {
+    flex: 1;
+    min-width: 320px;
+    max-width: 50%; /* Prevents expansion beyond 45% width */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    
+}
+
+/* 🎯 Prevents Expanding */
+.chart-box:hover {
+    transform: scale(1.03);
+}
+
+
+
+canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 250px; /* Prevents overflow */
+}
+/* 📋 Recent Transactions Table */
+.content-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents overflow */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #007BFF;
+    color: white;
+}
+
+/* 🎯 Quick Actions */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* 🟢 Button Styling */
+button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🚀 Button Effects */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn-blue { background: #007BFF; }
+.btn-green { background: #28A745; }
+.btn-orange { background: #FFC107; }
+.btn-red { background: #DC3545; }
+
+/* 🔄 Adjust for Responsive Sidebar */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 80px;
+        padding: 20px;
+    }
+
+    .sidebar h3 {
+        display: none;
+    }
+
+    .sidebar ul li a {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 60px;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 60px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .chart-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 100px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+}
+
+ 

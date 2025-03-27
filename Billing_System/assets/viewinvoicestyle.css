@@ -1,0 +1,179 @@
+/* ✅ General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ✅ Modal Styling */
+.modal-content {
+    border-radius: 12px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.modal-footer {
+    border-top: 1px solid #e3e3e3;
+}
+
+/* ✅ Modal Title */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
+
+/* ✅ Close Button */
+.btn-close {
+    background-color: #ff4e4e;
+    border-radius: 50%;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.btn-close:hover {
+    background-color: #ff1e1e;
+}
+
+/* ✅ Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #1e7e34, #155d27);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* ✅ Customer Details Section */
+.customer-details {
+    background: #f1f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d1e7ff;
+}
+
+/* ✅ Table Styling */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border: none;
+}
+
+.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ✅ Totals Section */
+.total-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.total-section p strong {
+    color: #000;
+}
+
+/* ✅ Dropdown Styling */
+select.form-select {
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+select.form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ✅ Validation Error Message */
+.input-error {
+    border: 2px solid #ff4e4e;
+    background-color: #ffecec;
+}
+
+.error-message {
+    color: #ff4e4e;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ✅ Custom Hover Effect for Buttons */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Print Button */
+.print-btn {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+}
+
+.print-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 95%;
+    }
+
+    .modal-title {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

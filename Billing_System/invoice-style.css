@@ -1,0 +1,322 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 40px;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+
+
+.invoice-box h2 {
+    text-align: center;
+    font-size: 18px; /* Slightly larger than before */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.logo {
+    flex-shrink: 0; /* Prevents resizing */
+}
+
+.logo img {
+    width: 150px; /* Adjusted logo size */
+    height: auto;
+    margin-left: 20px;
+    object-fit: contain;
+}
+
+.company-details h3 {
+    text-align: center;
+    font-size: 30px; /* Increased size for emphasis */
+    font-weight: bold;
+}
+
+.company-details p {
+    text-align: center;
+    font-size: 18px; /* Smaller than company name */
+    margin: 2px 0;
+}
+
+ .company-details{
+    text-align: center;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;  /* Align items in a row */
+    justify-content: center; /* Centers content horizontally */
+      
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000; /* Keeps the structure clean */
+    text-align: left; /* Align text properly */
+}
+
+
+.header .company-details{
+
+    margin-right: 110px;
+    margin-bottom: 10px;
+}
+.company-details {
+    flex-grow: 1;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Additional spacing improvements */
+.invoice-box {
+    background-color: #fff;
+    padding: 15px; /* Reduced padding for better fit */
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 100%; /* Ensure full width */
+    
+    /* Center the box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box; /* Prevents overflow issues */
+}
+
+
+.footer {
+    border: 1px solid #000;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+
+.bank-signature-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+}
+
+.bank-signature-box, .details-box, .transportation {
+    padding: 15px;
+    
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+}
+
+.bank-details, .signature {
+    width: 48%; /* Ensures both sections have equal width */
+}
+
+.signature {
+    text-align: right;
+margin-top: 83px;
+}
+
+.signature-block {
+    display: inline-block;
+    text-align: center;
+}
+
+.signature-image {
+    width: 150px;
+    height: auto;
+}
+
+.proprietor {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.details-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.left-section, .right-section {
+    width: 48%;
+}
+
+
+.left-section p, .right-section p {
+    margin: 5px 0;
+}
+
+.details-box .right-section p, strong{
+    font-size: 14px;
+}
+
+.details-box .left-section p, strong{
+    font-size: 14px;
+}
+.transportation {
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.transportation p {
+    margin: 0;
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.transportation p span {
+    display: flex;
+    align-items: center;
+}
+
+.transportation p span:not(:last-child)::after {
+    content: "|";
+    margin: 0 10px;
+    color: #6c757d;
+}
+
+h2, h3 {
+    margin: 0;
+    color: #212529;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    border: 1px solid #000;   /* Thicker, dark outer border */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #000;   /* Thicker inner borders */
+    text-align: center;
+}
+
+.table th {
+    background-color: #e2e6ea;
+    color: #212529;
+    font-weight: bold;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 1px solid #000; /* Ensure last row has a solid border */
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.total-row {
+    background-color: #927ab9;
+    color: #1d1c1c;
+    font-weight: bold;
+    
+}
+
+/* Rounded corners for the table */
+.table thead tr:first-child th:first-child {
+    border-top-left-radius: 5px;
+}
+
+.table thead tr:first-child th:last-child {
+    border-top-right-radius: 5px;
+}
+
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.amount-words {
+    margin-top: 10px;
+    font-style: italic;
+    color: #495057;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 110px;;
+}
+
+.signature-block {
+    display: inline-block;
+    text-align: center;
+}
+
+.signature-image {
+    width: 200px;
+    height: auto;
+}
+
+.bank-details p{
+    font-weight: bold;
+}
+
+.proprietor {
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #6c757d;
+    
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    @page {
+        margin: 10mm; /* Equal margin on all sides */
+        margin-header: 0;
+        margin-footer: 0;
+    }
+
+    .invoice-box {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 10px; /* Centering the invoice box */
+        padding: 30px;
+        box-shadow: none;        /* Remove shadow for print */
+        border: 1px solid #000;  /* Ensure the border is visible in print */
+        display: block;          /* Ensure block-level behavior */
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .table th, .table td {
+        border: 1px solid #000 !important; /* Ensure borders in print */
+    }
+
+    .footer {
+        page-break-after: avoid;
+    }
+}

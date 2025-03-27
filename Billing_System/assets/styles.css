@@ -1,0 +1,214 @@
+/* 🌍 Global Styles */
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+   
+    height: 100vh;
+    margin: 0;
+}
+
+/* 🔹 Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🎨 Login Card Styling */
+.login-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🎭 Login Card Hover Effect */
+.login-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Form Input Fields */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+/* 🌟 Input Focus Effect */
+.form-control:focus {
+    border: 2px solid #2a5298;
+    box-shadow: 0px 0px 12px rgba(42, 82, 152, 0.6);
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* 🟢 Button Styling */
+.btn {
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* 🚀 Button Hover Effect */
+.btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌙 Darker Button Effect on Click */
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 🎭 Links Styling */
+a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+/* 🎭 Links Hover Effect */
+a:hover {
+    color: #2a5298;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* 🔹 Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #1E1E2F;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Heading */
+.sidebar h3 {
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #D1D1E9;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+/* Sidebar Icons */
+.sidebar ul li a i {
+    margin-right: 12px;
+}
+
+/* Sidebar Hover Effects */
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* 🔹 Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 450px) {
+    .login-card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* 📱 Sidebar Toggle Button for Mobile */
+.toggle-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+    }
+
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .sidebar.collapsed {
+        width: 250px;
+        overflow: auto;
+    }
+
+    .main-content.expanded {
+        margin-left: 270px;
+    }
+}
