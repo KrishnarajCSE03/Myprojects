@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ip_address = getUserIP();
 
     // Check if email exists
-    $stmt = $conn->prepare("SELECT user_id, password_hash, role FROM users WHERE email = ?");
+    $stmt = $conn->prepare("SELECT user_id, passwordhash, role FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $stmt->store_result();
